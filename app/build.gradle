@@ -71,6 +71,7 @@ dependencies {
     implementation rootProject.ext.dependencies["rxandroid"]
     implementation rootProject.ext.dependencies["converter_gson"]
     implementation rootProject.ext.dependencies["retrofit2_rxjava2"]
+    implementation rootProject.ext.dependencies["annotation"]
 
 }
 

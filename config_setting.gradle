@@ -29,6 +29,7 @@ ext{
             rxjava                 :"2.2.8",
             rxandroid              :"2.1.1",
             retrofit2_rxjava2        :"2.2.0",
+            annotation              :"1.0.2",
     ]
 
     app=[
@@ -61,6 +62,7 @@ ext{
             rxjava                        :"io.reactivex.rxjava2:rxjava:${version["rxjava"]}",
             rxandroid                        :"io.reactivex.rxjava2:rxandroid:${version["rxandroid"]}",
             "retrofit2_rxjava2"                : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofit2_rxjava2"]}",
+            "annotation"                : "androidx.annotation:annotation:${version["annotation"]}",
     ]
 
 }
