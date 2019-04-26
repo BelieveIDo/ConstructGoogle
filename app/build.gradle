@@ -61,8 +61,14 @@ dependencies {
     implementation rootProject.ext.dependencies["room_runtime"]
     implementation rootProject.ext.dependencies["gson"]
     implementation rootProject.ext.dependencies["work_runtime_ktx"]
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["converter_gson"]
 
 }
+
 repositories {
     mavenCentral()
 }

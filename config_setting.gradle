@@ -23,6 +23,11 @@ ext{
             navigation             :"2.0.0",
             work                   :"2.0.1",
             gson                   :"2.8.2",
+            okhttp                 :"3.14.1",
+            retrofit               :"2.5.0",
+            converter_gson         :"2.5.0",
+            rxjava                 :"2.2.8",
+            rxandroid              :"2.1.1",
     ]
 
     app=[
@@ -48,7 +53,12 @@ ext{
             navigation_fragment_ktx   :"androidx.navigation:navigation-fragment-ktx:${version["navigation"]}",
             navigation_ui_ktx             :"androidx.navigation:navigation-ui-ktx:${version["navigation"]}",
             work_runtime_ktx              :"androidx.work:work-runtime-ktx:${version["work"]}",
-            gson                        :"com.google.code.gson:gson:${version["gson"]}"
+            gson                        :"com.google.code.gson:gson:${version["gson"]}",
+            okhttp                        :"com.squareup.okhttp3:okhttp:${version["okhttp"]}",
+            retrofit                        :"com.squareup.retrofit2:retrofit:${version["retrofit"]}",
+            converter_gson                 :"com.squareup.retrofit2:converter-gson:${version["converter_gson"]}",
+            rxjava                        :"io.reactivex.rxjava2:rxjava:${version["rxjava"]}",
+            rxandroid                        :"io.reactivex.rxjava2:rxandroid:${version["rxandroid"]}",
     ]
 
 }
