@@ -25,5 +25,14 @@ public final class AppConstant {
                     + File.separator
                     + "httpcache"
                     + File.separator;
+    public final static String LOG_CACHE_PATH =
+            Environment.getExternalStorageDirectory()
+                    .getAbsoluteFile()
+                    + File.separator
+                    + CACHE_FILE
+                    + File.separator
+                    + "log"
+                    + File.separator;
+
 
 }

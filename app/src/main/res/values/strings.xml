@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ConstructDemo</string>
+    <string name="can_not_find_version_name" >无版本名称</string>
 </resources>

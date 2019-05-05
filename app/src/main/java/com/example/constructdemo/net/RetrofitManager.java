@@ -6,14 +6,31 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitManager {
 
-    public  <T> T getService(Class<T> cls){
-        T t=new Retrofit.Builder().baseUrl(AppConstant.BASE_URL)
-                .client(HttpBase.getInstance())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-                .create(cls);
+    private static Retrofit mRetrofit;
 
+    public static RetrofitManager getInstance(){
+        return Holder.ins;
+    }
+
+    private RetrofitManager(){
+        initRetrofit();
+    }
+
+    private static class Holder{
+        private static final RetrofitManager ins=new RetrofitManager();
+    }
+
+    public  <T> T getService(Class<T> cls){
+        T t= mRetrofit.create(cls);
         return t;
+    }
+
+    private static void initRetrofit() {
+        mRetrofit = new Retrofit.Builder()
+                .baseUrl(AppConstant.BASE_URL)
+                .client(HttpBase.getInstance())
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .build();
     }
 }
