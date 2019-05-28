@@ -20,14 +20,15 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
 
     private final String TAG = CrashHandler.class.getSimpleName();
 
-    public CrashHandler(Context context) {
+    private CrashHandler(Context context) {
         this.mContext = context;
     }
 
     /**
      * 初始化,设置该CrashHandler为程序的默认处理器
      */
-    public static void init(CrashHandler crashHandler) {
+    public static void init(Context context) {
+        CrashHandler crashHandler=new CrashHandler(context);
         mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler(crashHandler);
     }

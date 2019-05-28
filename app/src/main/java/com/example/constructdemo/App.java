@@ -10,7 +10,11 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        mAppContext = this.getApplicationContext();
+        setAppContext(this.getApplicationContext());
+        CrashHandler.init(mAppContext);
     }
 
+    private static void setAppContext(Context mAppContext) {
+        App.mAppContext = mAppContext;
+    }
 }
